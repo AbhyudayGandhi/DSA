@@ -4,7 +4,7 @@ public:
         unordered_set<int> h;
         for(int i : nums){
             if (h.count(i)) return true;
-            else h.insert(i);
+            h.insert(i);
         }
         return false;
     }
