@@ -1,3 +1,3 @@
 # Write your MySQL query statement below
 
-select id from weather w where temperature > (select temperature from weather ww where w.recordDate=ww.recordDate+ Interval 1 day );
+select w.id from weather w join weather ww where w.temperature > ww.temperature and w.recordDate = ww.recordDate+ interval 1 day;  
