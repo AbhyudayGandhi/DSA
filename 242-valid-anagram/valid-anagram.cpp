@@ -7,8 +7,8 @@ public:
             h[s[i]-'a']++;
         }
         for (int i=0;i<t.size();i++){
-            h[t[i]-'a']--;
-            if(h[t[i]-'a']<0) return false;
+            
+            if(--h[t[i]-'a']<0) return false;
         }
         return true;
         
