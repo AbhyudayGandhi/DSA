@@ -1,7 +1,5 @@
-bool comparator(pair<int,int> a, pair<int,int> b){
-    return (b.second < a.second) ;
-    
-}
+
+
 class Solution {
 public:
     vector<int> topKFrequent(vector<int>& nums, int k) {
@@ -11,7 +9,7 @@ public:
             freq[i]++;
         }
         vector<pair<int, int>> v(freq.begin(), freq.end());
-        sort(v.begin(),v.end(),comparator);
+        sort(v.begin(),v.end(),[](const pair<int,int>a, const pair<int,int>b) {return a.second>b.second;});
         for (int i=0;i<k;i++){
             ans.push_back(v[i].first);
         }
