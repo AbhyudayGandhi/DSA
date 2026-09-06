@@ -5,8 +5,8 @@ public:
         pre[0]=1;
 
         for (int i : nums){
-            sum+=i;
-            if(pre.count(sum-k)) count+= pre[sum-k];
+            sum += i;
+            if(pre.count(sum-k)) count+=pre[sum-k];
             pre[sum]++;
         }
         return count;
